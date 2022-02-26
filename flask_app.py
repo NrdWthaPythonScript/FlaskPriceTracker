@@ -7,8 +7,8 @@ def home():
     return render_template('home.html')
 
 @app.route("/about")
-def hoe():
+def about():
     return "<h1>About Page<h1>"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True host=0.0.0.0)
