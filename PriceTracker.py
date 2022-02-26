@@ -8,7 +8,7 @@ def home():
 
 @app.route("/hoe")
 def hoe():
-    return "<h1>Hoooooe Page<h1>"
+    return "<h1>Hooooome Page<h1>"
 
 if __name__ == '__main__':
     app.run(debug=True)
