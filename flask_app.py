@@ -8,7 +8,7 @@ app.config['SECRET_KEY'] = '42de87382667e241a46d0668e6744aaa'
 @app.route("/home")
 @app.route("/")
 def home():
-    return render_template('home.html')
+    return render_template('/FlaskPriceTracker/templates/home.html')
 
 @app.route("/about")
 def about():
@@ -17,12 +17,12 @@ def about():
 @app.route("/registration")
 def register():
     form = RegistrationForm()
-    return render_template('register.html', form=form)
+    return render_template('/FlaskPriceTracker/templates/register.html', form=form)
 
 @app.route("/login")
 def login():
     form = LoginForm()
-    return render_template('login.html', form=form)
+    return render_template('/FlaskPriceTracker/templates/login.html', form=form)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
