@@ -20,7 +20,7 @@ def register():
     form = RegistrationForm()
     return render_template('register.html', form=form)
 
-@app.route("/login")
+@app.route("/login/")
 def login():
     form = LoginForm()
     return render_template('login.html', form=form)
