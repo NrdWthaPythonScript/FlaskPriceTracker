@@ -27,7 +27,7 @@ def register():
 def login():
     form = LoginForm()
     if form.email.data == 'stephen.sloper@yahoo.com' and form.password.data == 'password':
-        flash(f'{form.username.data} successfully signed in!', 'success')
+        flash(f'{form.email.data} successfully signed in!', 'success')
         return redirect(url_for('home'))
     else:
         flash('Login Unsuccessful. Please check username and password', 'danger')
