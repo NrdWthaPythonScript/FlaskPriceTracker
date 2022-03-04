@@ -26,6 +26,9 @@ def register():
 @app.route("/login/", methods=['GET', 'POST'])
 def login():
     form = LoginForm()
+    if form.validate_on_submit():
+        flash(f'{form.username.data} successfully signed in!', 'success')
+        return redirect(url_for('home'))
     return render_template('login.html', form=form)
 
 if __name__ == '__main__':
